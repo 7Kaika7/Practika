@@ -1,0 +1,43 @@
+﻿<Window x:Class="Praktika.Catalog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika"
+        mc:Ignorable="d"
+        Title="Catalog" Height="1115" Width="1050" FontFamily="Segoe Print" FontSize="20" >
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Purple"/>
+            <GradientStop Color="#FF09BEFB" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Canvas>
+        <TextBlock  x:Name="chislo" FontSize="20" Canvas.Left="923" Canvas.Top="15" Width="33" HorizontalAlignment="Left" Height="35" VerticalAlignment="Center"  />
+
+        <Image Source="/Image/Дед Мороз.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="100" Width="100" Canvas.Left="88" />
+        <TextBlock  Text="Household Appliances" FontSize="45"  VerticalAlignment="Top"  Height="80" Width="500" Canvas.Left="273" Canvas.Top="10" />
+        <Button  x:Name="basket"  Background="Transparent" BorderThickness="0"   Click="basket_Click"  Width="106" Canvas.Left="835" Height="92" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" >
+            <Image Source="/Image/Корзина.png" Height="85" Width="113"/>
+        </Button>
+
+        <Grid x:Name="myGrid" HorizontalAlignment="Left" Height="994" Canvas.Top="105" VerticalAlignment="Center" Width="1050">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="250"/>
+            </Grid.RowDefinitions>
+
+
+        </Grid>
+    </Canvas>
+</Window>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="Praktika.Basket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika"
+        mc:Ignorable="d"
+        Title="Basket" Height="1050" Width="1000" FontFamily="Segoe Print" FontSize="20" >
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Purple"/>
+            <GradientStop Color="#FF09BEFB" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Canvas>
+
+        <Image Source="/Image/Дед Мороз.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Canvas.Left="58" />
+        <TextBlock  Text="Household Appliances" FontSize="45"  VerticalAlignment="Center" HorizontalAlignment="Left" Height="80" Width="486" Canvas.Left="221" Canvas.Top="6" />
+        <Image Source="/Image/Корзина.png" Height="79" Canvas.Left="757" Width="81" Canvas.Top="6"/>
+        <TextBlock  x:Name="chislo" FontSize="20" Canvas.Left="820" Canvas.Top="18" Width="31" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top"  />
+        <Button  x:Name="back" Background="Transparent" BorderThickness="0" Click="back_Click" Canvas.Left="871" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Center"   >
+            <Image Source="/Image/Назад.png" Height="55" Width="104"/>
+        </Button>
+
+
+        <Grid x:Name="myGrid" Height="900" Width="1000" HorizontalAlignment="Center" Canvas.Top="105" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="239.655"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="totalPriceTextBox" 
+             IsReadOnly="True"  Width="390" Grid.Column="3" Grid.Row="1" Background="Transparent" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Left" TextAlignment="Center" Grid.ColumnSpan="2" Height="56" Margin="5,0,0,0" />
+            <Button Content="Рассчитать полную стоимость" HorizontalAlignment="Left" VerticalAlignment="Center" 
+            Margin="10,0,0,0" Click="GetTotalPriceButton_Click" Grid.Column="3"  Background="Transparent" BorderThickness="0" Grid.ColumnSpan="2" Width="380"/>
+            <Button Content="Заказать" HorizontalAlignment="Left" VerticalAlignment="Center" 
+            Margin="149,0,0,0" Click="ClearTableButton_Click" Grid.Column="3" Grid.Row="2"  Background="Transparent" BorderThickness="0" Grid.ColumnSpan="2"/>
+
+
+        </Grid>
+    </Canvas>
+
+</Window>
